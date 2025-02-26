@@ -14,7 +14,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sigmar&display=swap" rel="stylesheet">
 <body>
-
     <header>
         <ul>
            <a href="{% url 'details' %}"><li>EVENTS</li></a>
@@ -41,6 +40,10 @@
             change your perception of entertainment. </p>
         <a href="{% url 'tickets' %}" class="bnbutton">Book now</a>
     </main>
+
+    <img class="malone" src="{% static 'main/img/malone.jpg' %}" alt="malone">
+    <p class="malonetext">Post Malone Sun, 07 Sep • 17:00 <br>
+        Tottenham Hotspur Stadium</p>
 
 </body>
 
