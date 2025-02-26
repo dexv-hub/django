@@ -12,16 +12,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
 </head>
 <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sigmar&display=swap" rel="stylesheet">
 <body>
-
     <header>
         <ul>
-           <a href="{% url 'details' %}"><li>EVENT DETAILS</li></a>
+           <a href="{% url 'details' %}"><li>EVENTS</li></a>
            <a href="{% url 'tickets' %}"><li class="tickets">TICKETS</li></a>
            <a href="{% url 'about' %}"><li>ABOUT</li></a>
            <a href="{% url 'donate' %}"><li>DONATE</li></a>
         </ul>
-        <a href="">but</a>
     </header>
     <style>
         body{
@@ -35,6 +34,9 @@
     </style>
 
     <main>
+        <a href="{% url 'tickets' %}" class="bnbutton">Book now</a>
+        <a href="{% url 'login' %}" class="loginbutton">Log in</a>
+        <a href="{% url 'signup' %}" class="signupbutton">Sign up</a>
     </main>
 
 </body>

@@ -10,3 +10,7 @@ def tickets(request):
     return render(request, 'main/tickets.html')
 def donate(request):
     return render(request, 'main/donate.html')
+def login(request):
+    return render(request, 'main/about.html')
+def signup(request):
+    return render(request, 'main/about.html')

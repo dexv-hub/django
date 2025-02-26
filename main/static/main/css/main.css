@@ -71,13 +71,13 @@ main .bnbutton {
 .malone{
     width: 17%;
     height: auto;
-    margin-left: 43%;
+    margin-left: 40%;
     margin-top: -25%;
 }
 
 .malonetext{
     color: white;
-    margin-left: 46%;
+    margin-left: 43%;
     margin-top: -7.5%;
     font-size: 12px;
     font-family: "Times New Roman";
@@ -88,4 +88,30 @@ main .bnbutton {
 main{
     font-size: 20px;
     color: white;
+}
+
+.loginbutton{
+    display: inline-block;
+    padding: 3px 7px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    position: fixed;
+    top: 23px;
+    right: 180px;
+    border: solid white;
+}
+
+.signupbutton {
+     display: inline-block;
+    padding: 3px 7px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    position: fixed;
+    top: 23px;
+    right: 60px;
+    border: solid white;
 }
