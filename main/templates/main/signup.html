@@ -14,7 +14,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sigmar&display=swap" rel="stylesheet">
 <body>
-    <header>
+
+ <header>
         <ul>
            <a href="{% url 'details' %}"><li>EVENTS</li></a>
            <a href="{% url 'tickets' %}"><li class="tickets">TICKETS</li></a>
@@ -22,23 +23,24 @@
            <a href="{% url 'donate' %}"><li>DONATE</li></a>
         </ul>
     </header>
-    <style>
+     <style>
         body{
-            width: 100%;
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-image: url("https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-color: #322d2d;
         }
     </style>
 
     <main>
-        <a href="{% url 'tickets' %}" class="bnbutton">Book now</a>
+        <form method="post">
+            {% csrf_token token %}
+            {{ form.name }} <br>
+            {{ form.password }} <br>
+            {{ form.password1 }}<br>
+            <span>{{ error }}</span>
+            <button class='btn btn-success' type='submit'>Sign up</button>
+        </form>
         <a href="{% url 'login' %}" class="loginbutton">Log in</a>
         <a href="{% url 'signup' %}" class="signupbutton">Sign up</a>
     </main>
-
 
 </body>
 

@@ -4,6 +4,7 @@ header{
     margin-top: 25px;
 }
 
+
 ul{
     list-style: none;
     display: flex;
@@ -114,4 +115,10 @@ main{
     top: 23px;
     right: 60px;
     border: solid white;
+}
+
+form{
+    margin-left: 35%;
+    width: 400px;
+    margin-top: 250px;
 }
