@@ -1,5 +1,6 @@
 from .models import Register
 from django.forms import ModelForm, TextInput
+from django.contrib.auth.forms import AuthenticationForm
 
 
 class RegisterForm(ModelForm):
