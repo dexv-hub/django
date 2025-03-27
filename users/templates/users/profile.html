@@ -1,14 +1,12 @@
 {% extends 'users/base.html' %}
 
-{% block content %}<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+{% block content %}
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container bootstrap snippets bootdey">
   <div class="row justify-content-start">
     <div class="profile-nav col-md-3">
       <div class="panel">
         <div class="user-heading round text-center">
-          <a href="#">
-            <!-- Додай аватар тут, якщо потрібно -->
-          </a>
           <h1>Username</h1>
           <p>Email</p>
         </div>
@@ -26,31 +24,32 @@
     <div class="profile-info col-md-6">
       <div class="panel">
         <div class="panel-body bio-graph-info">
-          <form>
+          <form action="{% url 'profile' %}" method="post" >
+              {% csrf_token %}
             <div class="row">
               <div class="col-md-6 mb-3">
-                <label class="small mb-1" for="inputUsername">Username</label>
-                <input class="form-control" id="inputUsername" type="text" value="Username">
+                <label class="small mb-1" for="{{ form.username.id_for_label }}">Username</label>
+                {{ form.username }}
               </div>
               <div class="col-md-6 mb-3">
-                <label class="small mb-1" for="inputFirstName">First Name</label>
-                <input class="form-control" id="inputFirstName" type="text" value="First name">
+                <label class="small mb-1" for="{{ form.first_name.id_for_label }}">First Name</label>
+                {{ form.first_name }}
               </div>
               <div class="col-md-6 mb-3">
-                <label class="small mb-1" for="inputLastName">Last Name</label>
-                <input class="form-control" id="inputLastName" type="text" value="Last name">
+                <label class="small mb-1" for="{{ form.last_name.id_for_label }}">Last Name</label>
+                {{ form.last_name }}
               </div>
               <div class="col-md-6 mb-3">
-                <label class="small mb-1" for="inputEmail">Email</label>
-                <input class="form-control" id="inputEmail" type="email" value="Email">
+                <label class="small mb-1" for="{{ form.email.id_for_label }}">Email</label>
+                {{ form.email }}
               </div>
               <div class="col-md-6 mb-3">
-                <label class="small mb-1" for="inputBirthday">Birthday</label>
-                <input class="form-control" id="inputBirthday" type="text" value="Birthday">
+                <label class="small mb-1" for="{{ form.birthday.id_for_label }}">Birthday</label>
+                {{ form.birthday }}
               </div>
               <div class="col-md-6 mb-3">
-                <label class="small mb-1" for="inputCountry">Country</label>
-                <input class="form-control" id="inputCountry" type="text" value="Country">
+                <label class="small mb-1" for="{{ form.country.id_for_label }}">Country</label>
+                  {{ form.country }}
               </div>
             </div>
             <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
