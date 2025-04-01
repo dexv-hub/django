@@ -94,7 +94,6 @@ main{
 .loginbutton{
     display: inline-block;
     padding: 3px 7px;
-    color: white;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
@@ -102,20 +101,61 @@ main{
     top: 23px;
     right: 180px;
     border: solid white;
+    background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.loginbutton:hover{
+    text-decoration: none ;
+    color: lightgrey;
 }
 
 .signupbutton {
      display: inline-block;
     padding: 3px 7px;
-    color: white;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
     position: fixed;
     top: 23px;
     right: 60px;
-    border: solid white;
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
 }
+
+.signupbutton:hover{
+    text-decoration: none ;
+    color: lightgrey;
+}
+
+
+
 
 form{
     margin-left: 35%;
@@ -807,5 +847,5 @@ ul.summary-list > li:last-child  {
 }
 
 button {
-  width: 100%;
+    width: 100%;
 }
